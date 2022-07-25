@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo yum update -y
+sudo amazon-linux-extras install epel -y
+sudo amazon-linux-extras install memcached1.5 -y
+sudo systemctl start memcached
+sudo systemctl enable memcached
+sudo systemctl status memcached
+sudo memcached -p 11211 -U 11111 -u memcached -d
